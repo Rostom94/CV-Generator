@@ -1,32 +1,17 @@
-import { useState } from "react";
-import "./GeneralInfo.css";
-
-const GeneralInfo = () => {
-  const [fullName, SetFullName] = useState("");
-  function handleFullName(e) {
-    SetFullName(e.target.value);
-  }
-
-  const [email, SetEmail] = useState("");
-  function handleEmail(e) {
-    SetEmail(e.target.value);
-  }
-
-  const [phone, SetPhone] = useState("");
-  function handlePhone(e) {
-    SetPhone(e.target.value);
-  }
-
-  const [adress, SetAdress] = useState("");
-  function handleAdress(e) {
-    SetAdress(e.target.value);
-  }
-
+const GeneralInfo = ({
+  fullName,
+  email,
+  phone,
+  adress,
+  handleFullName,
+  handleEmail,
+  handlePhone,
+  handleAdress,
+}) => {
   return (
     <div className="info-container">
       <div className="info-title">General Information</div>
       <label id="fullname" htmlFor="fullname">
-        {" "}
         Enter your full Name
       </label>
       <input
